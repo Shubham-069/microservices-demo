@@ -1,0 +1,41 @@
+=== RUN   TestGetQuote
+{"message":"[GetQuote] received request","severity":"info","timestamp":"2026-06-24T11:49:16.76693452Z"}
+{"message":"[GetQuote] completed request","severity":"info","timestamp":"2026-06-24T11:49:16.767019157Z"}
+--- PASS: TestGetQuote (0.00s)
+=== RUN   TestGetQuoteEmptyCart
+{"message":"[GetQuote] received request","severity":"info","timestamp":"2026-06-24T11:49:16.767054153Z"}
+{"message":"[GetQuote] completed request","severity":"info","timestamp":"2026-06-24T11:49:16.767057092Z"}
+    shippingservice_test.go:78: TestGetQuoteEmptyCart: expected zero quote for empty cart, got '8.990000000'
+--- FAIL: TestGetQuoteEmptyCart (0.00s)
+=== RUN   TestShipOrder
+{"message":"[ShipOrder] received request","severity":"info","timestamp":"2026-06-24T11:49:16.76710357Z"}
+{"message":"[ShipOrder] completed request","severity":"info","timestamp":"2026-06-24T11:49:16.767121391Z"}
+--- PASS: TestShipOrder (0.00s)
+=== RUN   TestTrackingIdFormat
+--- PASS: TestTrackingIdFormat (0.00s)
+=== RUN   TestTrackingIdUniqueness
+--- PASS: TestTrackingIdUniqueness (0.00s)
+=== RUN   TestCreateQuoteFromFloat
+=== RUN   TestCreateQuoteFromFloat/zero
+=== RUN   TestCreateQuoteFromFloat/whole_dollars
+=== RUN   TestCreateQuoteFromFloat/with_cents
+=== RUN   TestCreateQuoteFromFloat/small_value
+=== RUN   TestCreateQuoteFromFloat/large_value
+--- PASS: TestCreateQuoteFromFloat (0.00s)
+    --- PASS: TestCreateQuoteFromFloat/zero (0.00s)
+    --- PASS: TestCreateQuoteFromFloat/whole_dollars (0.00s)
+    --- PASS: TestCreateQuoteFromFloat/with_cents (0.00s)
+    --- PASS: TestCreateQuoteFromFloat/small_value (0.00s)
+    --- PASS: TestCreateQuoteFromFloat/large_value (0.00s)
+=== RUN   TestCreateQuoteFromCount
+    shippingservice_test.go:169: CreateQuoteFromCount(0) = $8.99, want $0.0
+--- FAIL: TestCreateQuoteFromCount (0.00s)
+=== RUN   TestGetRandomLetterCode
+--- PASS: TestGetRandomLetterCode (0.00s)
+=== RUN   TestGetRandomNumber
+--- PASS: TestGetRandomNumber (0.00s)
+=== RUN   TestQuoteString
+--- PASS: TestQuoteString (0.00s)
+FAIL
+exit status 1
+FAIL	github.com/GoogleCloudPlatform/microservices-demo/src/shippingservice	0.005s
