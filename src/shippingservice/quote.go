@@ -35,6 +35,9 @@ func CreateQuoteFromCount(count int) Quote {
 	if count < 0 {
 		return CreateQuoteFromFloat(0)
 	}
+	if count == 0 {
+		return CreateQuoteFromFloat(0)
+	}
 	return CreateQuoteFromFloat(8.99)
 }
 
